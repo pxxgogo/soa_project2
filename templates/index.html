@@ -87,9 +87,9 @@
             <p style="font-size: 25px">计44<br>潘星宇<br>2014011245</p>
             {% if user.is_authenticated %}
             <div class="input-group search-input-div">
-                <input type="text" class="form-control" placeholder="Search for...">
+                <input id="search-input" type="text" class="form-control" placeholder="Search for...">
                 <span class="input-group-btn">
-                    <button class="btn btn-secondary" type="button">Go!</button>
+                    <button class="btn btn-secondary" type="button" onclick="search(this)">Go!</button>
                 </span>
             </div>
             {% else %}
