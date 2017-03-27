@@ -1,0 +1,11 @@
+.search-input-div {
+    opacity: 0.8;
+}
+
+.form-control {
+    border: 0 solid rgba(0,0,0,.15);
+}
+
+.hidden {
+    display: none;
+}

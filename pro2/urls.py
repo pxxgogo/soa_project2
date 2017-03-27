@@ -15,9 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+
 from kernel import index
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index.index),
+    url(r'^log_in_temp', index.log_in_temp),
+    url(r'^log_in_by_github', index.log_in_by_github),
+    url(r'^log_out', index.log_out),
 ]
