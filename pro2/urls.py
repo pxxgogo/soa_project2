@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from kernel import index
+from kernel import index, search
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -24,4 +24,6 @@ urlpatterns = [
     url(r'^log_in_temp', index.log_in_temp),
     url(r'^log_in_by_github', index.log_in_by_github),
     url(r'^log_out', index.log_out),
+    url(r'^search_authors', search.search_authors),
+    url(r'^search_coauthors', search.search_coauthors),
 ]

@@ -123,7 +123,4 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
 
-
-import json
-AUTHORS = json.loads(open(os.path.join(BASE_DIR, 'data/authors.json'), 'r').read())
-DOMAINS = json.loads(open(os.path.join(BASE_DIR, 'data/domains.json'), 'r').read())
+WEBSITE_URL = "183.172.195.76:8001"

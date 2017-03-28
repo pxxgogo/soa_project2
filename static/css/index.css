@@ -3,9 +3,43 @@
 }
 
 .form-control {
-    border: 0 solid rgba(0,0,0,.15);
+    border: 0 solid rgba(0, 0, 0, .15);
 }
 
 .hidden {
     display: none;
+}
+
+.bg-primary {
+    background-color: #a0a0a0 !important;
+}
+
+.search-table {
+    border-radius: 5px;
+    align-content: center;
+    color: #fff;
+    background: #4e4e4e;
+    margin-top: 50px;
+}
+
+.search-table > tbody > tr:hover {
+    cursor: pointer;
+}
+
+.table th {
+    text-align: center;
+    border-top: None;
+
+}
+
+.table-inverse {
+    color: #fff;
+    background-color: #292b2c;
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: none;
+
+    }
 }

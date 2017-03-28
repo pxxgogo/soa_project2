@@ -60,9 +60,9 @@
                 <li class="nav-item">
                     {% if user.is_authenticated %}
                     <a class="nav-link">{{user.email}}</a>
-                    <a class="nav-link" href="/log_out">登出</a>
+                    <a class="nav-link" href="/log_out" style="color: #F05F40">Log out</a>
                     {% else %}
-                    <a class="nav-link page-scroll" href="#homeHeading">请先登陆</a>
+                    <a class="nav-link" style="color: #F05F40">Please log in first</a>
                     {%endif%}
                 </li>
                 <!--<li class="nav-item">-->
@@ -93,26 +93,88 @@
                 </span>
             </div>
             {% else %}
-            <a class="btn btn-primary btn-xl" id="log-in-btn" href="/log_in_by_github">登陆您的github账号</a>
+            <a class="btn btn-primary btn-xl" id="log-in-btn" href="/log_in_by_github">Log in with your github
+                account</a>
             {% endif %}
         </div>
     </div>
 </header>
 
-<section class="bg-primary hidden" id="about">
+<button id="show-search-result-btn" class="btn btn-primary hidden" type="button" data-toggle="collapse" data-target="#search-result-section" aria-expanded="false" aria-controls="show_search_result">
+  </button>
+
+<section class="bg-primary collapse" id="search-result-section">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 offset-lg-2 text-center">
                 <h2 class="section-heading text-white">We've got what you need!</h2>
                 <hr class="light">
-                <p class="text-faded">Start Bootstrap has everything you need to get your new website up and running in
-                    no time! All of the templates and themes on Start Bootstrap are open source, free to download, and
-                    easy to use. No strings attached!</p>
+                <table class="table search-table table-hover">
+                    <thead>
+                    <tr style="text-align: center">
+                        <th>#</th>
+                        <th>name</th>
+                        <th>research institution</th>
+                        <th>hi</th>
+                        <th>pc</th>
+                        <th>nc</th>
+                        <th>pi</th>
+                        <th>upi</th>
+                    </tr>
+                    </thead>
+                    <tbody id="authors-tbody">
+
+                    </tbody>
+                </table>
+
                 <!--<a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a>-->
             </div>
         </div>
     </div>
 </section>
+
+<div class="bd-example hidden">
+    <button id='show-coauthors-btn' type="button" class="btn btn-primary" data-toggle="modal"
+            data-target="#coauthor-dialog-div">
+    </button>
+</div>
+
+<div id="coauthor-dialog-div" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="coauthor_dialog"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header ">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+                </button>
+                <h3 class="modal-title"
+                    id="event_v{{ event.No }}"> Coauthors</h3>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <table class="table">
+                            <thead>
+                            <tr style="text-align: center">
+                                <th>#</th>
+                                <th>name</th>
+                                <th>times</th>
+                                <th>research institution</th>
+                                <th>hi</th>
+                                <th>pc</th>
+                                <th>nc</th>
+                                <th>pi</th>
+                                <th>upi</th>
+                            </tr>
+                            </thead>
+                            <tbody id="coauthors-tbody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <!--<section class="no-padding" id="portfolio">-->
