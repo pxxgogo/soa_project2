@@ -123,4 +123,4 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
 
-WEBSITE_URL = "183.172.195.76:8001"
+WEBSITE_URL = "pxxgogoproject.southcentralus.cloudapp.azure.com"
