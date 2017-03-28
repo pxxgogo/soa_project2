@@ -5,7 +5,7 @@ from pro2.settings import BASE_DIR
 
 
 class Data_model(object):
-    __AUTHORS = json.loads(open(os.path.join(BASE_DIR, 'data/authors.json'), 'r').read())
+    __AUTHORS = json.loads(open(os.path.join(BASE_DIR, 'data/new_authors.json'), 'r').read())
     __DOMAINS = json.loads(open(os.path.join(BASE_DIR, 'data/new_domains.json'), 'r').read())
     __CO_AUTHORS = json.loads(open(os.path.join(BASE_DIR, 'data/coauthors.json'), 'r').read())
 
@@ -18,7 +18,7 @@ class Data_model(object):
         if domain in Data_model.__DOMAINS:
             authors_index_list = json.loads(Data_model.__DOMAINS[domain])
             for index in authors_index_list:
-                author_dict = {"index": index, "info": Data_model.__AUTHORS[str(index)]}
+                author_dict = {"index": index, "info": json.loads(Data_model.__AUTHORS[str(index)])}
                 authors_info_list.append(author_dict)
         return authors_info_list
 
@@ -30,7 +30,7 @@ class Data_model(object):
             for coauthor in coauthors_list:
                 index = coauthor["index"]
                 times = coauthor["times"]
-                author_dict = {"index": index, "times": times, "info": Data_model.__AUTHORS[str(index)]}
+                author_dict = {"index": index, "times": times, "info": json.loads(Data_model.__AUTHORS[str(index)])}
                 authors_info_list.append(author_dict)
         return authors_info_list
 
