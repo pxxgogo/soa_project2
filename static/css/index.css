@@ -18,7 +18,7 @@
     border-radius: 5px;
     align-content: center;
     color: #fff;
-    background: #4e4e4e;
+    background: #F05F40;
     margin-top: 50px;
 }
 
@@ -40,10 +40,13 @@
 @media (min-width: 576px) {
     .modal-dialog {
         max-width: none;
-
     }
 }
 
 .title-text {
+    color: #F05F40;
+}
+
+h1 {
     color: #F05F40;
 }
