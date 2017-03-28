@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'^log_in_temp', index.log_in_temp),
     url(r'^log_in_by_github', index.log_in_by_github),
     url(r'^log_out', index.log_out),
-    url(r'^search_authors', search.search_authors),
-    url(r'^search_coauthors', search.search_coauthors),
+    url(r'^expert_finding', search.search_authors),
+    url(r'^coauthors', search.search_coauthors),
+
 ]
