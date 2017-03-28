@@ -5,6 +5,7 @@
 
 function search(obj) {
     var text = $("#search-input").val();
+    $("#show-search-result-btn").click();
     $.ajax({
         type: 'get',
         url: "/expert_finding",
@@ -44,10 +45,10 @@ function search(obj) {
                     "</tr>"
             }
             $("#authors-tbody").html(tbody_html);
-            $("#show-search-result-btn").click();
             $('html, body').stop().animate({
                 scrollTop: $("#search-result-section").offset().top
             }, 1500, 'easeInOutExpo');
+
         }
     });
 }
