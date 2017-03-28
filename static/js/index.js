@@ -8,7 +8,7 @@ function search(obj) {
     $("#show-search-result-btn").click();
     $.ajax({
         type: 'get',
-        url: "/expert_finding",
+        url: "/search_authors",
         data: {'domain': text},
         datatype: "json",
         // timeout: time,
@@ -64,7 +64,7 @@ function get_coauthors(obj) {
     var author_index = obj.id.substring(4);
     $.ajax({
         type: 'get',
-        url: "/coauthors",
+        url: "/search_coauthors",
         data: {'id': author_index},
         datatype: "json",
         // timeout: time,
