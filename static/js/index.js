@@ -5,7 +5,7 @@
 
 function search(obj) {
     var text = $("#search-input").val();
-    $("#show-search-result-btn").click();
+    $("#show-search-result-btn").attr("class", 'bg-primary');
     $.ajax({
         type: 'get',
         url: "/search_authors",
